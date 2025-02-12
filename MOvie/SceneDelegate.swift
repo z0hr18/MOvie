@@ -24,45 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
            window?.rootViewController = navController  // 5. Naviqasiya controller-i əsas görünüş kimi təyin edirik
            window?.makeKeyAndVisible()
        }
-    
-    func createHomeNavigationController() -> UINavigationController {
-        let homeViewController = HomeViewController()
-        homeViewController.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house"), tag: 0)
-        return UINavigationController(rootViewController: homeViewController)
-        
-    }
-    
-    func createSearchNavigationController() -> UINavigationController {
-        let searchViewController = SearchViewController()
-        searchViewController.tabBarItem = UITabBarItem(title: "Search", image: UIImage(systemName: "magnifyingglass"), tag: 1)
-        return UINavigationController(rootViewController: searchViewController)
-        
-    }
-    
-    func createWatchListNavigationController() -> UINavigationController {
-        let watchListViewController = WatchListViewController()
-        watchListViewController.tabBarItem = UITabBarItem(title: "Watch List", image: UIImage(systemName: "bookmark"), tag: 2)
-        return UINavigationController(rootViewController: watchListViewController)
-        
-    }
-    
-    func addTabBarTopBorder(tabBar: UITabBar, color: UIColor, height: CGFloat) {
-        let separator = UIView(frame: CGRect(x: 0, y: 0, width: tabBar.frame.width, height: height))
-        separator.backgroundColor = color
-        tabBar.addSubview(separator)
-    }
-    
-    
-    func createTabbar() -> UITabBarController {
-        let tabbar = UITabBarController()
-        UITabBar.appearance().tintColor = .init(named: "0296E5")
-        tabbar.tabBar.backgroundColor = .init(named: "242A32")
-        tabbar.viewControllers = [createHomeNavigationController(), createSearchNavigationController(), createWatchListNavigationController()]
-        addTabBarTopBorder(tabBar: tabbar.tabBar, color: .systemBlue, height: 0.5)
-        
-        return tabbar
-    }
-    
+  
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
         // This occurs shortly after the scene enters the background, or when its session is discarded.
