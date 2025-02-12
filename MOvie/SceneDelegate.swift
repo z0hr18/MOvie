@@ -10,16 +10,20 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
-    
-    
-    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        guard let windowScene  = (scene as? UIWindowScene) else { return }
-        
-        window = UIWindow(frame: windowScene.coordinateSpace.bounds)
-        window?.windowScene = windowScene
-        window?.rootViewController = createTabbar()
-        window?.makeKeyAndVisible()
-    }
+    var appCoordinator: AppCoordinator?  // 1. AppCoordinator üçün dəyişən əlavə etdik
+       
+       func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+           guard let windowScene  = (scene as? UIWindowScene) else { return }
+           
+           let navController = UINavigationController()  // 2. Naviqasiya üçün UINavigationController yaradılır
+           
+           appCoordinator = AppCoordinator(navigationController: navController)  // 3. AppCoordinator yaradılır
+           appCoordinator?.start()  // 4. AppCoordinator-un start() funksiyası çağırılır
+           
+           window = UIWindow(windowScene: windowScene)
+           window?.rootViewController = navController  // 5. Naviqasiya controller-i əsas görünüş kimi təyin edirik
+           window?.makeKeyAndVisible()
+       }
     
     func createHomeNavigationController() -> UINavigationController {
         let homeViewController = HomeViewController()
