@@ -16,12 +16,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
            guard let windowScene  = (scene as? UIWindowScene) else { return }
            
            let navController = UINavigationController()  // 2. Naviqasiya üçün UINavigationController yaradılır
-           
+           navController.navigationBar.isHidden = true  // Boşluğu silmək üçün
+
            appCoordinator = AppCoordinator(navigationController: navController)  // 3. AppCoordinator yaradılır
            appCoordinator?.start()  // 4. AppCoordinator-un start() funksiyası çağırılır
            
            window = UIWindow(windowScene: windowScene)
-           window?.rootViewController = navController  // 5. Naviqasiya controller-i əsas görünüş kimi təyin edirik
+           window?.rootViewController = navController  // 5. Naviqasiya controller-i main view kimi təyin edirik
            window?.makeKeyAndVisible()
        }
   
