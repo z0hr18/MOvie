@@ -14,7 +14,7 @@ final class NetworkManager {
     func fetch<T: Decodable>(endpoint: Endpoint, completion: @escaping (Result<T, Error>) -> Void) { //T Decodable model olacaq; nəticə gələndə completion-u çağıracağıq
         let request = endpoint.request()
         
-        //URLSession ilə sorğu göndər
+        //URLSession ilə sorğu göndəririk
         URLSession.shared.dataTask(with: request) { data, response, error in
             // Burada cavab gələcək
             

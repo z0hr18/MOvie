@@ -8,7 +8,6 @@
 import UIKit
 
 class HomeViewController: UIViewController, UICollectionViewDelegate {
-    
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.text = "What do you want to watch?"
@@ -66,6 +65,9 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
         collectionView.backgroundColor = .clear
         return collectionView
     }()
+    
+    private let viewModel: HomeViewModel
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
