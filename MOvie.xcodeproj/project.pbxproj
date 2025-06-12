@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		B81B76572D747AD500ECE25D /* MOvie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = MOvie.app; path = "/Users/ahmad-zadaig/Documents/GitHub/MOvie/build/Debug-iphoneos/MOvie.app"; sourceTree = "<absolute>"; };
+		8C9820832DFB62BF00757BA0 /* MOvie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = MOvie.app; path = "/Users/zohraguliyeva/Documents/GitHub/MOvie/build/Debug-iphoneos/MOvie.app"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -71,7 +71,7 @@
 			packageProductDependencies = (
 			);
 			productName = MOvie;
-			productReference = B81B76572D747AD500ECE25D /* MOvie.app */;
+			productReference = 8C9820832DFB62BF00757BA0 /* MOvie.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */

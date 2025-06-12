@@ -66,7 +66,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate {
         return collectionView
     }()
     
-    private let viewModel: HomeViewModel
+//    private let viewModel: HomeViewModel
 
     
     override func viewDidLoad() {
